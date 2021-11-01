@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html land="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Fundamentals of Javascript</title>
+
+        <link rel="stylesheet" href="./assets/css/styles.css" />
+    </head>
+
+    <body>
+        <div class="scorelist"><a href="scorelist.html">View High Scores</a><div>
+        
+        <div class="timer">Time Limit:<span id="time"></span></div>
+       
+        <div class="wrapper">
+        <div id="initial-screen" class="start">
+            <h1> Fundamentals of Javascript</h1>
+            <p>
+                Welcome! In this quiz, you will be tested on some basic fundamentals of Javascript. Please note there is a time limit while answering questions, and incorrect answers will result in loss of time. Good luck! 
+            </p>
+            <button id="start">Begin</button>
+        </div>
+
+        <div id="quiz-questions" class="hide">
+            <h2 id="question"></h2>
+            <div id="options" class="options"></div>
+        </div>
+
+        <div id="quiz-finished" class="hide">
+            <h2>Quiz Finished</h2>
+            <p>Final results: <span id="final-results"></span>.</p>
+            <p>
+              Enter initials: <input type="text" id="initials" max="3" />
+              <button id="enter">Enter</button>
+            </p>
+          </div>
+    
+          <div id="feedback" class="feedback hide"></div>
+        </div>
+    
+        <script src="./assets/js/quiz-questions.js"></script>
+        <script src="./assets/js/script.js"></script>
+    </body>
+</html
+        
