@@ -35,7 +35,7 @@ body {
     max-height: 400px;
     overflow: auto;
   }
-  
+
   li {
     padding: 5px;
     list-style: decimal inside none;
@@ -58,7 +58,7 @@ body {
     text-align: center;
   }
   
-  .scorelist {
+  .highscores {
     position: static;
     top: 10px;
     left: 10px;

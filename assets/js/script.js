@@ -58,9 +58,9 @@ function getQuestion() {
     choicesEl.children[3].addEventListener("click", function(event){
       questionClick(choicesEl.children[3]);
     });
-  }
+}
 
-  function questionClick(answerChoice) {
+function questionClick(answerChoice) {
     // If-Statement to determine incorrect response
     if(answerChoice.textContent != questions[currentQuestionIndex].answer){
       time -= 15;
@@ -101,9 +101,9 @@ function quizEnd() {
     finalScoreEl.textContent = time;
   
     questionsEl.setAttribute("class", "hide");
-  }
+}
   
-  function clockTick() {
+function clockTick() {
     time--;
     timerEl.textContent = time;
   
@@ -111,9 +111,10 @@ function quizEnd() {
     if(time <= 0)
       quizEnd();
     
-  }
+}
 
-  function saveHighscore() {
+function saveHighscore() {
+    
     var initials = initialsEl.value.toUpperCase();
 
     if(initials === ""){ 
@@ -136,22 +137,23 @@ function quizEnd() {
         initials: initials,
         score: time
       };
-      highscores.push(newScore);
+      
       // save to localstorage
-      localStorage.setItem("highscores", JSON.stringify(initials));
+      localStorage.setItem("highscores", JSON.stringify(highscores));
       // redirect to next page
       location.href = "scorelist.html";
     }
-  }
+}
   
-  function checkForEnter(event) {
+function checkForEnter(event) {
       // Saving Score
       if(event.keyCode === 13)
         saveHighscore();
-  }
-  
+
+}
   submitBtn.onclick = saveHighscore;
 
   startBtn.onclick = startQuiz;
 
   initialsEl.onkeyup = checkForEnter;
+

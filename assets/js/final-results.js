@@ -2,9 +2,10 @@
 function printHighscores() {
     var highScores = JSON.parse(localStorage.getItem("highscores"));
     if(highScores != null){
+        
       for(var i = 0; i < highScores.length; i++){
         var scoreLi = document.createElement("li");
-     
+        scoreLi.textContent = highScores[i].initials + " - " + highScores[i].score;
         document.getElementById("highscores").appendChild(scoreLi);
       }
       
